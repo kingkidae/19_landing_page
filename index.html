@@ -3,15 +3,317 @@
 <html lang="ko">
   <!-- 언어: 한국어 -->
   <head>
-<meta charset="UTF-8" />    
-    <title>HTML 기초</title>
-<mrta name = "description" content = "HTML에서 기초를 복습해봅니다.">
-    <link rel = "stylesheet " href = "style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>루미에르 시티 | 도심 속 프리미엄 레지던스</title>
+    <meta name="description" content="루미에르 시티 분양 안내 랜딩 페이지 (연습용 가상 단지)" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>HTML 태그</h1>
-    <p>태그 종류에 따라 다른 용도를 갖고 있다.</p>
-    <p class = "blue">클래스를 지정한 텍스트</p>
-    <p id = "orange">id를 지정한 텍스트</p>
+    <!-- 상단 메뉴: 스크롤하면 배경이 생김 -->
+    <nav class="nav" id="nav">
+      <div class="container nav-inner">
+        <a href="#" class="logo">LUMIÈRE<span>CITY</span></a>
+        <div class="nav-menu" id="navMenu">
+          <a href="#overview">사업안내</a>
+          <a href="#premium">프리미엄</a>
+          <a href="#siteplan">단지배치도</a>
+          <a href="#location">로케이션</a>
+          <a href="#gallery">갤러리</a>
+          <a href="#contact" class="btn btn-primary btn-sm">
+            잔여호실 상담 <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- 1. 히어로 -->
+      <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content container">
+          <span class="badge">GRAND OPEN · 선착순 동호지정</span>
+          <h1>루미에르 시티,<br />빛으로 완성되는 <em>새로운 기준</em></h1>
+          <p>도심의 중심에서 누리는 하이엔드 라이프스타일.<br />당신만을 위한 특별한 공간이 준비되어 있습니다.</p>
+          <div class="hero-btns">
+            <a href="#contact" class="btn btn-primary">관심고객 등록</a>
+            <a href="#overview" class="btn btn-outline">사업개요 보기</a>
+          </div>
+        </div>
+        <a href="#intro" class="scroll-down"><span class="material-symbols-outlined">expand_more</span></a>
+      </section>
+
+      <!-- 2. 소개 문구 -->
+      <section class="intro" id="intro">
+        <div class="container">
+          <p class="eyebrow">LUMIÈRE CITY</p>
+          <h2>도심의 한가운데에서<br />품격의 차이를 만드는 <em>새로운 랜드마크</em></h2>
+          <div class="stats">
+            <div><strong>1분</strong><span>지하철역 도보</span></div>
+            <div><strong>49F</strong><span>초고층 스카이라인</span></div>
+            <div><strong>624</strong><span>총 세대수</span></div>
+            <div><strong>3,000㎡</strong><span>커뮤니티 시설</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. 사업개요 -->
+      <section class="section" id="overview">
+        <div class="container overview">
+          <div class="overview-img">
+            <div class="frame"></div>
+            <img src="https://picsum.photos/seed/lumiere-tower/900/1100" alt="단지 투시도" />
+          </div>
+          <div>
+            <p class="eyebrow">Project Overview</p>
+            <h2 class="title">사업개요</h2>
+            <p class="desc">도시의 새로운 랜드마크, 루미에르 시티의 가치를 확인하세요.</p>
+            <table class="info-table">
+              <tr><th>사업명</th><td>루미에르 시티</td></tr>
+              <tr><th>대지위치</th><td>○○시 ○○구 ○○동 일원</td></tr>
+              <tr><th>건축규모</th><td>지하 5층 ~ 지상 49층, 4개동</td></tr>
+              <tr><th>세대수</th><td>아파트 624세대</td></tr>
+              <tr><th>전용면적</th><td>84㎡ · 101㎡ · 129㎡</td></tr>
+              <tr><th>입주예정</th><td>2029년 하반기 (예정)</td></tr>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. 중간 CTA 띠 -->
+      <section class="band">
+        <div class="container band-inner">
+          <div>
+            <h3>빛나는 삶의 시작, 지금 만나보세요</h3>
+            <p>자세한 분양 일정과 혜택을 안내해 드립니다.</p>
+          </div>
+          <div class="band-btns">
+            <a href="tel:010-0000-0000" class="btn btn-dark"><span class="material-symbols-outlined">call</span> 전화 상담</a>
+            <a href="#contact" class="btn btn-dark-outline">방문 예약</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. 프리미엄 4가지 -->
+      <section class="section" id="premium">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Premium</p>
+            <h2 class="title">루미에르 시티가 선사하는 특별한 가치</h2>
+            <p class="desc">당신의 삶을 완벽하게 채워줄 네 가지 프리미엄을 확인하세요.</p>
+          </div>
+          <div class="cards cards-4">
+            <article class="card">
+              <img src="https://picsum.photos/seed/lumiere-edu/600/400" alt="" />
+              <div class="card-body">
+                <span class="material-symbols-outlined icon">school</span>
+                <h3>교육과 교통</h3>
+                <p>역세권 교통망과 도보권 학교·학원가를 함께 누리는 생활의 중심입니다.</p>
+                <a href="#location" class="more">자세히 보기 <span class="material-symbols-outlined">arrow_forward</span></a>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/lumiere-gym/600/400" alt="" />
+              <div class="card-body">
+                <span class="material-symbols-outlined icon">fitness_center</span>
+                <h3>하이엔드 커뮤니티</h3>
+                <p>피트니스, 실내 골프, 프라이빗 라운지 등 입주민 전용 시설을 갖췄습니다.</p>
+                <a href="#gallery" class="more">자세히 보기 <span class="material-symbols-outlined">arrow_forward</span></a>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/lumiere-garden/600/400" alt="" />
+              <div class="card-body">
+                <span class="material-symbols-outlined icon">park</span>
+                <h3>친환경 조경</h3>
+                <p>사계절 변화를 느낄 수 있는 테마 정원과 순환 산책로가 조성됩니다.</p>
+                <a href="#siteplan" class="more">자세히 보기 <span class="material-symbols-outlined">arrow_forward</span></a>
+              </div>
+            </article>
+            <article class="card">
+              <img src="https://picsum.photos/seed/lumiere-smart/600/400" alt="" />
+              <div class="card-body">
+                <span class="material-symbols-outlined icon">smart_toy</span>
+                <h3>스마트 홈 시스템</h3>
+                <p>통합 보안과 스마트폰 IoT 제어로 안전하고 편리한 생활을 약속합니다.</p>
+                <a href="#siteplan" class="more">자세히 보기 <span class="material-symbols-outlined">arrow_forward</span></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. 상담 유도 -->
+      <section class="cta">
+        <div class="container cta-inner">
+          <h2>더 자세한 정보가 필요하신가요?</h2>
+          <p>모델하우스에서 프리미엄 가치를 직접 확인해 보세요.<br />전문 상담사가 상세한 분양 정보를 안내해 드립니다.</p>
+          <a href="#contact" class="btn btn-primary">상담 신청하기</a>
+        </div>
+      </section>
+
+      <!-- 7. 단지 배치도 -->
+      <section class="section" id="siteplan">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Site Plan</p>
+            <h2 class="title">단지 배치도</h2>
+            <p class="desc">최적의 배치로 완성된 프리미엄 라이프스타일</p>
+          </div>
+          <div class="siteplan-img">
+            <img src="https://picsum.photos/seed/lumiere-siteplan/1400/700" alt="단지 배치도" />
+          </div>
+          <div class="cards cards-3">
+            <div class="feature">
+              <span class="material-symbols-outlined icon">groups</span>
+              <h3>커뮤니티</h3>
+              <p>다양한 커뮤니티 시설을 단지 중앙에 배치해 동선을 줄였습니다.</p>
+            </div>
+            <div class="feature">
+              <span class="material-symbols-outlined icon">home_iot_device</span>
+              <h3>스마트 시스템</h3>
+              <p>스마트 홈 시스템으로 편리하고 안전한 생활 환경을 제공합니다.</p>
+            </div>
+            <div class="feature">
+              <span class="material-symbols-outlined icon">cell_tower</span>
+              <h3>통신 설비</h3>
+              <p>최적의 통신 환경을 위한 이동통신 설비를 갖추었습니다.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8. 평면 안내 (탭) -->
+      <section class="section section-alt" id="unit">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Premium Unit Plan</p>
+            <h2 class="title">라이프스타일에 맞춘 혁신 설계</h2>
+            <p class="desc">공간의 미학을 담은 평면을 소개합니다.</p>
+          </div>
+          <div class="tabs" id="tabs">
+            <button class="tab active" data-unit="0">84㎡</button>
+            <button class="tab" data-unit="1">101㎡</button>
+            <button class="tab" data-unit="2">129㎡</button>
+          </div>
+          <div class="unit">
+            <img id="unitImg" src="https://picsum.photos/seed/lumiere-unit84/900/700" alt="평면도" />
+            <div class="unit-info">
+              <h3 id="unitName">84㎡ TYPE</h3>
+              <p id="unitDesc">3룸 2욕실, 4베이 판상형 구조로 채광과 통풍이 뛰어난 실속형 평면입니다.</p>
+              <ul id="unitSpec">
+                <li><span>전용면적</span><b>84.97㎡</b></li>
+                <li><span>공급면적</span><b>112.40㎡</b></li>
+                <li><span>세대수</span><b>312세대</b></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. 입지 -->
+      <section class="section" id="location">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Premium Location</p>
+            <h2 class="title">압도적 입지 가치</h2>
+            <p class="desc">교육, 교통, 생활의 중심에서 가장 빛나는 삶이 시작됩니다.</p>
+          </div>
+          <div class="location">
+            <img src="https://picsum.photos/seed/lumiere-map/1000/800" alt="입지 환경" />
+            <div class="loc-list">
+              <div class="loc-item">
+                <span class="material-symbols-outlined icon">train</span>
+                <div><h3>쾌속 교통망</h3><p>지하철역 초역세권에 간선도로와 고속철도역이 가까운 교통의 요지입니다.</p></div>
+              </div>
+              <div class="loc-item">
+                <span class="material-symbols-outlined icon">menu_book</span>
+                <div><h3>학세권</h3><p>초·중·고교와 학원가가 도보권에 있어 자녀 교육 환경이 우수합니다.</p></div>
+              </div>
+              <div class="loc-item">
+                <span class="material-symbols-outlined icon">storefront</span>
+                <div><h3>생활 인프라</h3><p>백화점, 대형마트, 근린공원까지 모두 누리는 중심 생활권입니다.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 10. 갤러리 -->
+      <section class="section section-alt" id="gallery">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">High-End Residence</p>
+            <h2 class="title">GALLERY</h2>
+            <p class="desc">품격 있는 공간을 미리 만나보세요.</p>
+          </div>
+          <div class="gallery" id="galleryGrid">
+            <figure><img src="https://picsum.photos/seed/lg1/600/800" alt="" /><figcaption>오픈형 거실</figcaption></figure>
+            <figure><img src="https://picsum.photos/seed/lg2/600/400" alt="" /><figcaption>외관 야경</figcaption></figure>
+            <figure><img src="https://picsum.photos/seed/lg3/600/600" alt="" /><figcaption>프리미엄 마감재</figcaption></figure>
+            <figure><img src="https://picsum.photos/seed/lg4/600/450" alt="" /><figcaption>마스터룸 욕실</figcaption></figure>
+            <figure><img src="https://picsum.photos/seed/lg5/600/800" alt="" /><figcaption>시그니처 가든</figcaption></figure>
+            <figure><img src="https://picsum.photos/seed/lg6/600/500" alt="" /><figcaption>피트니스 센터</figcaption></figure>
+            <figure><img src="https://picsum.photos/seed/lg7/600/700" alt="" /><figcaption>라운지</figcaption></figure>
+            <figure><img src="https://picsum.photos/seed/lg8/600/400" alt="" /><figcaption>스카이라운지</figcaption></figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. 관심고객 등록 -->
+      <section class="section" id="contact">
+        <div class="container contact">
+          <div>
+            <p class="eyebrow">VIP Registration</p>
+            <h2 class="title">프리미엄의 시작,<br />지금 바로 등록하세요</h2>
+            <p class="desc">관심고객으로 등록하시면 청약 일정과 모델하우스 오픈 정보를 가장 먼저 받아보실 수 있습니다.</p>
+            <a href="tel:010-0000-0000" class="phone"><span class="material-symbols-outlined">call</span> 010-0000-0000</a>
+            <div class="calendar">
+              <h3><span class="material-symbols-outlined">calendar_month</span> 분양 캘린더 (예정)</h3>
+              <ul>
+                <li><b>11.07</b><span>모델하우스 오픈</span></li>
+                <li><b>11.18</b><span>특별공급 청약</span></li>
+                <li><b>11.19</b><span>1순위 청약</span></li>
+                <li><b>11.27</b><span>당첨자 발표</span></li>
+              </ul>
+            </div>
+          </div>
+          <form class="form" id="form">
+            <h3>잔여호실 상담</h3>
+            <p>정보를 남겨주시면 담당자가 확인 후 연락드립니다.</p>
+            <label>이름<input type="text" name="name" placeholder="홍길동" required /></label>
+            <label>연락처<input type="tel" name="phone" placeholder="010-0000-0000" required /></label>
+            <label>관심 평형
+              <select name="unit">
+                <option>84㎡</option>
+                <option>101㎡</option>
+                <option>129㎡</option>
+              </select>
+            </label>
+            <label class="check"><input type="checkbox" required /> 개인정보 수집 및 이용에 동의합니다.</label>
+            <button type="submit" class="btn btn-primary btn-block">상담 신청하기</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-inner">
+        <a href="#" class="logo">LUMIÈRE<span>CITY</span></a>
+        <p>본 페이지는 HTML/CSS 연습용으로 제작된 가상의 분양 안내 페이지입니다.</p>
+        <p>© 2026 LUMIÈRE CITY. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- 갤러리 확대 보기 -->
+    <div class="lightbox" id="lightbox"><img id="lightboxImg" alt="" /></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
