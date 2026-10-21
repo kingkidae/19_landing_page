@@ -1,16 +1,16 @@
 h1 {
-  color: blue
-  font-dize: 20px;
+  color: blue;
+  font-size: 20px;
 }
 p {
-color: red
+  color: red;
 }
 
 .blue {
-    color: blue;
+  color: blue;
 }
 /* .이름하면 그 이름 색상만 바꾼다는 뜻임 */
 #orange {
-    color: orange;
+  color: orange;
 }
 /* id가 나오면 #을 써야 됨 */
