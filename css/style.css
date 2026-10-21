@@ -1,0 +1,22 @@
+section {
+  height: 100vh;
+  /* 우리가 쓰는 화면 100퍼센트를 쓰겠다는 의미 */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* 사진을 계속 반복해서 붙일건지 여부 */
+  background-position: center center;
+  /* 배경화면 포지션 위치 가로 세로 */
+}
+
+.hero {
+  background-image: url(../images/bread1.jpg);
+  text-align: center;
+  padding-top: 10vh;
+}
+
+div {
+  padding-top: 10px;
+  width: 500px;
+  height: 500px;
+  border: 1px solid black;
+}
